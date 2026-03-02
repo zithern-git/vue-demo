@@ -1,19 +1,12 @@
 <template>
-  <div class="app">
-    <h1>hello</h1>
-  </div>
+  <Person></Person>
 </template>
 
 <script lang="ts">
+import Person from './components/Person.vue'
+
 export default {
-  name: 'app',
+  name: 'App',
+  components: { Person },
 }
 </script>
-
-<style>
-.app {
-  background-color: #ddd;
-  border-radius: 10%;
-  padding: 20px;
-}
-</style>
