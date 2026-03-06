@@ -1,31 +1,26 @@
 <template>
   <div class="person">
-    <h2>姓名：{{ count.name }}</h2>
-    <h2>年龄：{{ count.age }}</h2>
-    <button @click="changeName">修改姓名</button>
-    <button @click="changeAge">修改年龄</button>
-    <button @click="showTel">显示电话</button>
+    firstname:<input type="text" v-model="firstname" /> <br />
+    lastname:<input type="text" v-model="lastname" /> <br />
+    firstname + lastname: <span>{{ firstname }}-{{ lastname }}</span
+    ><br />
+    <input type="radio" value="male" name="gender" v-model="gender" /> male
+    <input type="radio" value="female" name="gender" v-model="gender" /> female
   </div>
 </template>
 
-<script setup>
+<script setup name="Person">
 import { ref } from 'vue'
 
-const count = ref({ name: 'Jerry', age: 18 })
-function changeName() {
-  count.value.name = 'Tom'
-}
-function changeAge() {
-  count.value.age++
-}
-function showTel() {
-  alert('13888888888')
-}
+let firstname = ref('Tom')
+let lastname = ref('Green')
+let gender = ref('male')
 </script>
 
 <style>
 .person {
-  background-color: #4759a1;
+  background-color: #bbc3e2;
+  margin: 0 auto;
 }
 button {
   margin: 0 5px;
