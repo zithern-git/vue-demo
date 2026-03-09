@@ -1,10 +1,8 @@
 <template>
-  <div class="person">???</div>
+  <div class="person"></div>
 </template>
 
-<script setup name="Person">
-import { ref } from 'vue'
-</script>
+<script setup name="Person" lang="ts"></script>
 
 <style>
 .person {
