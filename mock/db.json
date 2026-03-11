@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "张三",
+      "age": 25,
+      "email": "zhangsan@test.com"
+    },
+    {
+      "id": "2",
+      "name": "李四",
+      "age": 30,
+      "email": "lisi@test.com"
+    }
+  ],
+  "goods": [
+    {
+      "id": "1",
+      "name": "Vue3 实战教程",
+      "price": 99,
+      "stock": 100
+    },
+    {
+      "id": "2",
+      "name": "TS 入门指南",
+      "price": 69,
+      "stock": 50
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

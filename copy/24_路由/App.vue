@@ -3,20 +3,15 @@
     <!-- 头部 -->
     <header>
       <div class="header-logo">路由测试</div>
+      <div class="header-user">欢迎访问</div>
     </header>
 
     <!-- 导航栏 -->
     <nav>
       <ul class="nav-list">
-        <li class="nav-item">
-          <RouterLink :to="{ name: 'home' }" active-class="high-light">首页</RouterLink>
-        </li>
-        <li class="nav-item">
-          <RouterLink :to="{ name: 'news' }" active-class="high-light">新闻</RouterLink>
-        </li>
-        <li class="nav-item">
-          <RouterLink :to="{ name: 'about' }" active-class="high-light">关于</RouterLink>
-        </li>
+        <li class="nav-item"><RouterLink to="/home" active-class="high-light">首页</RouterLink></li>
+        <li class="nav-item"><RouterLink to="/news" active-class="high-light">新闻</RouterLink></li>
+        <li class="nav-item"><RouterLink to="about" active-class="high-light">关于</RouterLink></li>
       </ul>
     </nav>
 
@@ -92,9 +87,6 @@ nav {
   gap: 10px; /* 导航项间距 */
 }
 
-.high-light {
-  background-color: #f2dfdf;
-}
 .nav-item a {
   display: block;
   padding: 12px 16px;
