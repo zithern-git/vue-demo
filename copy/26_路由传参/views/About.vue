@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h2>这是首页</h2>
+    <h2>这是About</h2>
   </div>
 </template>
 
-<script setup lang="ts" name="Home"></script>
+<script setup lang="ts" name="About"></script>
 
 <style scoped>
 div {
