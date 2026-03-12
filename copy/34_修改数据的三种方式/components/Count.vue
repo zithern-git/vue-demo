@@ -1,0 +1,61 @@
+<template>
+  <div class="count-box">
+    <h2>当前求和为：{{ countStore.count }}</h2>
+    <select class="select-box" v-model.number="n">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    <button @click="add">加</button>
+    <button @click="minus">减</button>
+  </div>
+</template>
+
+<script setup lang="ts" name="Count">
+import { ref } from 'vue'
+import { useCountStore } from '@/store/count'
+
+const countStore = useCountStore()
+
+let n = ref(1)
+
+function add() {
+  // 第一种修改数据的方式
+  // countStore.count += n.value
+
+  // 第二种修改数据的方式
+  /* countStore.$patch({
+    count: 666,
+  }) */
+
+  // 第三种修改数据的方式
+  countStore.plus(n.value)
+}
+
+function minus() {
+  countStore.count -= n.value
+}
+</script>
+
+<style scoped>
+.count-box {
+  width: 100%;
+  height: 150px;
+  border: 1px solid;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: #d1edf5;
+}
+
+h2 {
+  margin: 20px;
+}
+
+.select-box {
+  margin: 20px;
+}
+
+button {
+  margin-left: 20px;
+}
+</style>
