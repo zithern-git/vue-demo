@@ -4,19 +4,10 @@
     <ul>
       <li v-for="news in newsList" :key="news.id">
         <!-- 第一种写法 -->
-        <!-- <RouterLink
-          :to="`/news/detail?id=${news.id}&title=${news.title}&content=${news.content}`"
-          >{{ news.title }}</RouterLink
-        > -->
+        <!-- <RouterLink :to="`/news/detail/${news.id}/${news.title}/${news.content}`">{{
+          news.title
+        }}</RouterLink> -->
         <!-- 第二种写法 -->
-        <!-- <RouterLink
-          :to="{
-            path: '/news/detail',
-            query: { id: news.id, title: news.title, content: news.content },
-          }"
-          >{{ news.title }}</RouterLink
-        > -->
-        <!-- 第三种写法 -->
         <RouterLink
           :to="{
             name: 'detail',
@@ -33,7 +24,6 @@
 </template>
 
 <script setup lang="ts" name="News">
-import type { title } from 'process'
 import { onMounted, onUnmounted } from 'vue'
 import { RouterView, RouterLink } from 'vue-router'
 

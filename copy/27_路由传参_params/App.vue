@@ -9,13 +9,13 @@
     <nav>
       <ul class="nav-list">
         <li class="nav-item">
-          <RouterLink push :to="{ name: 'home' }" active-class="high-light">首页</RouterLink>
+          <RouterLink :to="{ name: 'home' }" active-class="high-light">首页</RouterLink>
         </li>
         <li class="nav-item">
-          <RouterLink replce :to="{ name: 'news' }" active-class="high-light">新闻</RouterLink>
+          <RouterLink :to="{ name: 'news' }" active-class="high-light">新闻</RouterLink>
         </li>
         <li class="nav-item">
-          <RouterLink push :to="{ name: 'about' }" active-class="high-light">关于</RouterLink>
+          <RouterLink :to="{ name: 'about' }" active-class="high-light">关于</RouterLink>
         </li>
       </ul>
     </nav>

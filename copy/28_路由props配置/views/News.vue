@@ -3,9 +3,12 @@
     <h2>这是News</h2>
     <ul>
       <li v-for="news in newsList" :key="news.id">
-        <button @click="showNewsDetail(news)">查看新闻</button>
+        <!-- 第一种写法 -->
+        <!-- <RouterLink :to="`/news/detail/${news.id}/${news.title}/${news.content}`">{{
+          news.title
+        }}</RouterLink> -->
+        <!-- 第二种写法 -->
         <RouterLink
-          replace
           :to="{
             name: 'detail',
             query: { id: news.id, title: news.title, content: news.content },
@@ -23,38 +26,6 @@
 <script setup lang="ts" name="News">
 import { onMounted, onUnmounted } from 'vue'
 import { RouterView, RouterLink } from 'vue-router'
-import { useRouter } from 'vue-router'
-
-const router = useRouter()
-
-/* //❌ 错误写法 interface的首字母大写
-// Interface NewsInter {
-//正确写法 interface的首字母小写
-interface NewsInter {
-  id: string
-  title: string
-  content: string
-} */
-
-//❌错误写法 type的首字母大写
-// Type NewsInter {
-//正确写法 type 的首字母小写
-type NewsInter = {
-  id: string
-  title: string
-  content: string
-}
-
-function showNewsDetail(news: NewsInter) {
-  router.push({
-    name: 'detail',
-    query: {
-      id: news.id,
-      title: news.title,
-      content: news.content,
-    },
-  })
-}
 
 const newsList = [
   { id: '36252201', title: 'HTML', content: 'div' },

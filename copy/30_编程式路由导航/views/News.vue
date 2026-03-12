@@ -37,7 +37,7 @@ interface NewsInter {
 } */
 
 //❌错误写法 type的首字母大写
-// Type NewsInter {
+// Type NewsType {
 //正确写法 type 的首字母小写
 type NewsInter = {
   id: string
