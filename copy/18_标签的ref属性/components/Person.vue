@@ -15,7 +15,7 @@ let city = ref()
 
 function getCity() {
   // let x = document.getElementById('city')
-  console.log(city.value)
+  console.log(city.value) // [object HTMLHeadingElement]
 }
 
 // 可以通过 defineExpose 编译器宏来显式指定在 <script setup> 组件中要暴露出去的属性
